@@ -19,7 +19,7 @@ dir.create(here("data", "results"))
 dir.create("code")
 
 # write raw data file
-write_csv(key_crop_yields, here("data", "raw", "key_crop_yields_raw.csv")
+write_csv(key_crop_yields, here("data", "raw", "key_crop_yields_raw.csv"))
 
 
 # explore key_crop_yields -------------------------------------------------

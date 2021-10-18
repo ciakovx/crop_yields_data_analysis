@@ -94,3 +94,11 @@ top_yield_per_country_crop <- tidy_yields %>%
   ungroup() %>%
   filter(entity == "United States")
 
+# plot yield amounts across time
+tidy_yields %>%
+  ggplot(aes(year, yield, color = crop)) +
+  geom_line(alpha = 0.7, size = 1.5) +
+  geom_point() +
+  facet_wrap(~entity, ncol = 5) +
+  scale_x_continuous(guide = guide_axis(angle = 90)) +
+  labs(x = NULL, y = "yield (tons per hectare)")
